@@ -10,5 +10,5 @@ class Calculation:
 # Class Factory Method
     @classmethod
     def create(cls, value_a, value_b):
-        """creating method """
+        """creating method"""
         return cls(value_a,value_b)
