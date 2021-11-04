@@ -11,7 +11,7 @@ from calculator.main import Calculator
 # pass it to a test, it is called a fixture
 @pytest.fixture
 def clear_history():
-    """clearing history of the calculator"""
+    """clearing history of thecalculator"""
     Calculator.clear_history()
 
 def test_calculator_add(clear_history):
