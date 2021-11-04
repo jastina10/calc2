@@ -36,7 +36,7 @@ class Calculator:
     @staticmethod
     def get_result_of_last_calculation_added_to_history():
         """-1 gets the last item added to the list automaticly and you can
-        #expect it to have the get result method"""
+        #expect it to have the getresult method"""
         return Calculator.history[-1].getresult()
 
     @staticmethod
