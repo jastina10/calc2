@@ -9,5 +9,5 @@ script:
 
 branches:
   only:
-    - Part2
+    - part5
     - development
