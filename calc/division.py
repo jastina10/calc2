@@ -7,7 +7,7 @@ A and value B from the calculation class"""
 
 from calc.calculation import Calculation
 
-#This is how you extend the Addition class with the Calculation
+#This is how you can extend the Addition class with the Calculation
 class Division(Calculation):
     """This is how you extend the Addition class with the Calculation"""
 
