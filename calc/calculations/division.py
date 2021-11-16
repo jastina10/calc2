@@ -7,5 +7,7 @@ class Division(Calculation):
 
     def get_result(self):
         """get the division results"""
-        result = self.values[0] / self.values[1]
-        return result
+        try:
+            return self.values[0] / self.values[1]
+        except ZeroDivisionError as error:
+            return print(error)

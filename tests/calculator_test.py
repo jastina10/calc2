@@ -1,5 +1,6 @@
 """Testing the Calculator"""
-import unittest
+# pylint: disable=redefined-outer-name,unused-argument,missing-function-docstring
+
 import pytest
 from calc.calculator import Calculator
 from calc.history.calculations import Calculations
@@ -35,16 +36,4 @@ def test_calculator_divide_static(clear_history_fixture):
     """Testing the divide method of the calculator"""
     # pylint: disable=unused-argument,redefined-outer-name
     assert Calculator.divide_numbers(12.0, 2.0) == 6.0
-
-class MyTestCase(unittest.TestCase):
-    """A test case is the individual unit of testing.unittest provides a base class"""
-
-    # pylint: disable=unused-argument,redefined-outer-name
-
-    def test_calculator_divide_by_zero(self):
-        """Testing the divide method of the calculator when dividing by zero"""
-        with self.assertRaises(ZeroDivisionError):
-            Calculator.divide_numbers(8.0, 0)
-
-    if __name__ == '__main__':
-        unittest.main()
+    assert Calculator.divide_numbers(12.0, 0.0) is None
