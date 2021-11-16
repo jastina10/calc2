@@ -1,6 +1,5 @@
 # Calculator Project Setup
-[![Build Status](https://app.travis-ci.com/jastina10/calc2.svg?branch=main)](https://app.travis-ci.com/jastina10/calc2)
-Run Pip Install
+[![Build Status](https://app.travis-ci.com/jastina10/calc2.svg?branch=new)](https://app.travis-ci.com/jastina10/calc2)Run Pip Install
 pip install -r requirements.txt
 
 To run tests, Lint, and Coverage report use this command:
