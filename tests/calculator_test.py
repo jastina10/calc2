@@ -34,7 +34,7 @@ def test_calculator_multiply_static(clear_history_fixture):
 def test_calculator_divide_static(clear_history_fixture):
     """Testing the divide method of the calculator"""
     # pylint: disable=unused-argument,redefined-outer-name
-    assert Calculator.divide_numbers(10.0, 2.0) == 5.0
+    assert Calculator.divide_numbers(12.0, 2.0) == 6.0
 
 class MyTestCase(unittest.TestCase):
     """A test case is the individual unit of testing.unittest provides a base class"""
@@ -44,7 +44,7 @@ class MyTestCase(unittest.TestCase):
     def test_calculator_divide_by_zero(self):
         """Testing the divide method of the calculator when dividing by zero"""
         with self.assertRaises(ZeroDivisionError):
-            Calculator.divide_numbers(4.0, 0)
+            Calculator.divide_numbers(8.0, 0)
 
     if __name__ == '__main__':
         unittest.main()
