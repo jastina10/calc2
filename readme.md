@@ -1,10 +1,4 @@
-# Calculator Project Setup
-[![Build Status](https://app.travis-ci.com/jastina10/calc2.svg?branch=part5)](https://app.travis-ci.com/jastina10/calc2)pip install -r requirements.txt
+# Calculator Project 3 Part 1
 
-To run tests, Lint, and Coverage report use this command:
 
-pytest  --pylint --cov
-
-.pylintrc is the config for pylint
-.coveragerc is the config for coverage
-setup.py is a config file for pytest
+[Screenshots](https://github.com/jastina10/calc2/tree/Project3_part1/calc/Screenshots)
