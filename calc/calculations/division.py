@@ -7,5 +7,7 @@ class Division(Calculation):
 
     def get_result(self):
         """get the division results"""
-        result = self.values[0] / self.values[1]
-        return result
+        division_of_values = 1.0
+        for value in self.values:
+            division_of_values = value / division_of_values
+        return division_of_values
