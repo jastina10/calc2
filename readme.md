@@ -2,12 +2,12 @@
 
 
 
-![home.png](C:\Users\sajav\PycharmProjects\calc2\app\static\images\home.PNG)
+![home.png](home.PNG)
 
-![img.png](C:\Users\sajav\PycharmProjects\calc2\app\static\images\cal.png)
+![img.png](cal.png)
 
-![img.png](C:\Users\sajav\PycharmProjects\calc2\app\static\images\img_1.png)
+![img.png](img_1.png)
 
-![img.png](C:\Users\sajav\PycharmProjects\calc2\app\static\images\numeric.png)
+![img.png](numeric.png)
 
 ![img.png](img.png)
