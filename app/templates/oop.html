@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>OOP Concept</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial,serif;
+      padding: 10px;
+      background: #f1f1f1;
+    }
+    .resize {
+      width: 400px;
+      height: auto;
+    }
+    /* Header/Blog Title */
+    .header {
+      padding: 30px;
+      text-align: center;
+      background: white;
+    }
+
+    .header h1 {
+      font-size: 50px;
+    }
+    a:hover,
+    a.selected {
+      color: white;
+      background: royalblue;
+    }
+
+    /* Style the top navigation bar */
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    /* Style the topnav links */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change color on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {
+      float: left;
+      width: 75%;
+    }
+
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      background-color: #f1f1f1;
+      padding-left: 20px;
+    }
+
+    /* Fake image */
+    .fakeimg {
+      background-color: lightgray;
+      width: 100%;
+      padding: 20px;
+    }
+
+    /* Add a card effect for articles */
+    .card {
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+      margin-top: 20px;
+    }
+
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+      .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .fakeimg {
+
+        padding: 0;
+        height: 800px;
+      }
+    }
+
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .topnav a {
+        float: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Python for Beginners : Object-Oriented Programming</h1>
+  <p style="font-size: 20px ; color: #666666">Encapsulation, Inheritance, Polymorphism, and Abstraction</p>
+</div>
+
+<div id="myDIV" class="topnav">
+
+  <a href="index.html">Home</a>
+  <a href="AAA_Testing.html" >AAA Testing</a>
+  <a href="oop.html" class="selected">OOP Concept</a>
+  <a href="solid.html">SOLID</a>
+  <a href="pylint.html">Pylint and OOP Glossary</a>
+
+
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h3>Object-Oriented Programming</h3>
+
+    <p>Object Oriented programming (OOP) is a programming paradigm that relies on the concept of classes and objects. It is used to structure a software program into simple, reusable pieces of code blueprints (usually called classes), which are used to create individual instances of objects. There are many object-oriented programming languages including JavaScript, C++, Java, and Python.</p>
+    <p>Object-Oriented Programming (OOP) is a way of writing programs by using objects to represent data and functions. This type of programming with objects makes it easy to communicate with one another and exchange data. Developers can also easily reuse the code.</p>
+      <h3>The 4 Pillars of OOP in Python</h3>
+    <p>Abstraction, Encapsulation, Inheritance, Polymorphism are the four pillars of Object-Oriented Programming. We will go over a brief explanation of each in Python.</p>
+    </div>
+
+    <div class="card">
+      <h2>1. Abstraction</h2>
+      <div class="fakeimg" style="height:200px;">
+        <p>Abstraction is used to hide internal details and show only functionalities. Abstracting something means to give names to things, so that the name captures the basic idea of what a function or a whole program does.</p>
+        <p>An abstract class can be considered as a blueprint for other classes. It allows you to create a set of methods that must be created within any child classes built from the abstract class. A class which contains one or more abstract methods is called an abstract class. An abstract method is a method that has a declaration but does not have an implementation. While we are designing large functional units we use an abstract class. When we want to provide a common interface for different implementations of a component, we use an abstract class. </p>
+      </div>
+      <br><h5>Let's  look at examples of abstract classes in Python:</h5>
+      <p>Here , calculation is abstract base class. It has implementation in another class</p>
+      <img class="resize" src="images/abstract3.PNG" alt="calculator"><br><br>
+      <p>Here , calculation is abstracted in multiplication class. </p>
+      <p>When we annotate any method with an abstractmethod keyword, then it is an abstract method in Python (it won't have any method implementation). If the parent class has abstractmethod and not inherited from an abstract class, then it is optional to implement the abstractmethod .</p>
+      <img class="resize" src="images/abstractM.PNG" alt="calculator"><br><br>    </div>
+
+    <div class="card">
+      <h2>2. Encapsulation</h2>
+      <div class="fakeimg" style="height:200px;">
+      <p>Encapsulation is a process of protecting the data and functionality of a class in a single unit, called an object. This mechanism is often used to protect the data of an object from other objects. It's one of the fundamental principles in any programming language that supports object-oriented programming.
+      </p>
+      <p>We can protect the variables in the class by marking them as private. We need to add two underscores as a prefix to make a variable private. Once we make a variable as private, we can't access them directly from the objects of that class. Now, let's see how to create private variables:</p>
+      </div>
+      <h5>Let's  look at examples of Encapsulation in Python:</h5>
+      <p>The calculation class initiates an object with the private variable "values" which is instantiated by the user. Although there are a few more steps within the program to create an object, this represents encapsulation because the "values" is stored within "self" which is the object.
+      </p>
+      <img class="resize" src="images/encap.PNG" alt="calculator"><br><br>
+
+    </div>
+
+    <div class="card">
+      <h2>3. Inheritance</h2>
+      <div class="fakeimg" style="height:200px;">
+      <p>Inheritance is a powerful feature in object-oriented programming. It is the process of creating a class that can derive or inherit the properties and methods from another class(parent/base).
+      </p>
+<p>We can represent real-world relationships easily with this feature. The reusability of the code will be simple. It has a powerful transitive nature  meaning when class B inherited from class A, then the classes that inherited from class B will automatically be inherited from class A.
+</p>      </div>
+      <h5>Let's  look at examples of Inheritance in Python:</h5>
+      <p>In this example calculation is Parent class. Division is the child class which is derived from parent class Calculation.</p>
+      <img class="resize" src="images/abstract3.PNG" alt="calculator"><br>
+      <p>The benefits of inheritance are programs can create a generic parent class, and then create more specific child classes as needed. This simplifies overall programming, because instead of recreating the structure of the Division class multiple times, child classes automatically gain access to functionalities within their parent class.</p>
+      <img class="resize" src="images/division.PNG" alt="calculator"><br><br>
+
+    </div>
+
+    <div class="card">
+      <h2>4. Polymorphism</h2>
+      <div class="fakeimg" style="height:200px;">
+<p>The word polymorphism means having many forms. In programming, polymorphism means the same function name is used for different types. When we previously used inheritance, we explicitly linked parent classes to child classes to write reusable code. Polymorphism is achieving the same outcome of shared properties and methods but there is no link between the code; instead, we write the properties and methods to operate in similar and logical ways, allowing us to freely swap classes and methods and being able to expect a similar output.
+</p>
+<p>In simple terms, polymorphism uses a single entity, like a method or object, to represent different behaviors.
+</p>      </div>
+      <h4>Let's  look at examples of Polymorphism in Python:</h4>
+      <p>In this example calculation is Parent class. Addition, Subtraction , Multiplication and Division are the child class which is derived from parent class Calculation. Polymorphism is the process of using an operator or function in different ways for different data input. Within the calculator program, we can see this happen with the "get_result" method of the multiple child classes, and its interaction with the calculation class.</p>
+      <img class="resize" src="images/abstract3.PNG" alt="calculator"><br>
+<p>All the children classes have the "get_result" function. They all return same thing. But operation are different like addition class adds two value together, subtraction class subtract two number, multiplication class multiply two numbers and division class divide two numbers. This is an example of polymorphism because both Addition ,Subtraction , Multiplication and Division come from the same parent class, and both have a similar functioning method with the same name that operates on the "self.values" from the parent class.</p>      <img class="resize" src="images/subtract.PNG" alt="calculator"><br><br>
+      <img class="resize" src="images/addition.PNG" alt="calculator"><br><br>
+      <img class="resize" src="images/multi.PNG" alt="calculator"><br><br>
+      <img class="resize" src="images/division.PNG" alt="calculator"><br><br>
+
+
+    </div>
+
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>About Me</h3>
+      <div class="fakeimg" style="height:200px;"><h4>Suhani Javia</h4>
+        <p>Student at New Jersey Institute of Technology (NJIT) pursuing MS in Computer Science (CS).</p></div>
+      <br>
+      <a style="text-decoration: none" class="text-muted" href="#">Email: sj48@njit.edu</a>
+      <br>            <a style="text-decoration: none" href="https://www.linkedin.com/in/suhani-javia-31b930128/" >LinkedIn</a>
+      <br>            <a  style="text-decoration: none" href="https://github.com/jastina10/internethistoryproject">GitHub</a>
+
+    </div>
+    <div class="card">
+      <h3>About This Article</h3>
+      <div class="fakeimg">
+        <p>This Article basically demonstrates the principles of object oriented programming: Encapsulation, Inheritance, Polymorphism, and Abstraction</p>
+        <p>This article is the part of a Project towards credits for IS601 - Web Systems Development at New Jersey Institute of Technology</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h4>      &copy; Suhani Javia 2021</h4>
+</div>
+
+</body>
+</html>

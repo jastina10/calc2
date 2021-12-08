@@ -1,72 +1,54 @@
 """Calculation history Class"""
 from calc.calculations.addition import Addition
-from calc.calculations.division import Division
-from calc.calculations.multiplication import Multiplication
 from calc.calculations.subtraction import Subtraction
-
-
+from calc.calculations.multiplication import Multiplication
 class Calculations:
-    """Calculation history Class"""
+    """Calculations class manages the history of calculations"""
     history = []
-
     # pylint: disable=too-few-public-methods
     @staticmethod
     def clear_history():
-        """Calculation history Class"""
+        """clear the history of calculations"""
         Calculations.history.clear()
         return True
-
     @staticmethod
     def count_history():
-        """Calculation history Class"""
+        """get number of items in history"""
         return len(Calculations.history)
-
     @staticmethod
-    def get_last_calculation():
-        """Calculation history Class"""
+    def get_last_calculation_object():
+        """get last calculation"""
         return Calculations.history[-1]
-
+    @staticmethod
+    def get_last_calculation_result_value():
+        """get last calculation"""
+        calculation = Calculations.get_last_calculation_object()
+        return calculation.get_result()
     @staticmethod
     def get_first_calculation():
-        """Calculation history Class"""
-        return Calculations.history[-1]
-
+        """get first calculation"""
+        return Calculations.history[0]
     @staticmethod
     def get_calculation(num):
         """ get a specific calculation from history"""
         return Calculations.history[num]
-
     @staticmethod
     def add_calculation(calculation):
-        """ get a specific calculation from history"""
+        """ get a generic calculation from history"""
         return Calculations.history.append(calculation)
-
-
     @staticmethod
-    def add_calculation(inserted_calculation):
-        """append calculation from history"""
-        return Calculations.history.append(inserted_calculation)
-
-    @staticmethod
-    def addition_calculation(values):  # pass list of values
-        """add Addition to history by creating addition calculation object using factory method"""
+    def add_addition_calculation_to_history(values):
+        """create an addition and add object to history using factory method create"""
         Calculations.add_calculation(Addition.create(values))
-        return Calculations.history[-1]  # return the result of the addition from the history
-
+        #Get the result of the calculation
+        return True
     @staticmethod
-    def multiplication_calculation(values):
-        """add Multiplication to history by creating addition calculation object using factory method"""
-        Calculations.add_calculation(Multiplication.create(values))
-        return Calculations.history[-1]
-
-    @staticmethod
-    def subtraction_calculation(values):
-        """add Subtraction to history by creating addition calculation object using factory method"""
+    def add_subtraction_calculation_to_history(values):
+        """create a subtraction object to history using factory method create"""
         Calculations.add_calculation(Subtraction.create(values))
-        return Calculations.history[-1]
-
+        return True
     @staticmethod
-    def division_calculation(values):
-        """add Division to history by creating addition calculation object using factory method"""
-        Calculations.add_calculation(Division.create(values))
-        return Calculations.history[-1]
+    def add_multiplication_calculation_to_history(values):
+        """Add a multiplication object to history using factory method create"""
+        Calculations.add_calculation(Multiplication.create(values))
+        return True

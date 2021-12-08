@@ -1,4 +1,13 @@
-# Calculator Project 3 Part 1
+# Calculator Project 3 Part 2
 
 
-[Screenshots](https://github.com/jastina10/calc2/tree/Project3_part1/calc/Screenshots)
+
+![home.png](C:\Users\sajav\PycharmProjects\calc2\app\static\images\home.PNG)
+
+![img.png](C:\Users\sajav\PycharmProjects\calc2\app\static\images\cal.png)
+
+![img.png](C:\Users\sajav\PycharmProjects\calc2\app\static\images\img_1.png)
+
+![img.png](C:\Users\sajav\PycharmProjects\calc2\app\static\images\numeric.png)
+
+![img.png](img.png)

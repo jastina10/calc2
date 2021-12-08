@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-info" role="alert" style="text-align: center ; margin-top: 70px ;  font-weight: bold;">
+                {{ message }}
+
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<div style="text-align: center ; ">
+    <h1>Calculation Result</h1><br>
+    <strong>Value 1: </strong> {{ value1 }} <br>
+    <strong>Value 2: </strong> {{ value2 }} <br>
+    <strong>Type of Operation: </strong> {{ operation }} <br>
+    <strong>Your Result: </strong> {{ result }}
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Index I should see this change with a page refresh</h1>
+    <p class="important" style="margin-top: 30px">
+<h1>Welcome to my awesome homepage.</h1>
+<h2>To compute arithmetic operation please click above Calculator navbar link</h2>
+        <img  src="{{ url_for('static', filename='images/download.jpg') }}">
+    </p>
+{% endblock %}
