@@ -4,10 +4,10 @@
 
 ![home.png](home.PNG)
 
-![img.png](cal.png)
+![img.png](Cal.PNG)
 
 ![img.png](img_1.png)
 
-![img.png](numeric.png)
+![img.png](numeric.PNG)
 
 ![img.png](img.png)
