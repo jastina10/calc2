@@ -2,8 +2,35 @@
 {% block title %}Index{% endblock %}
 {% block head %}
     {{ super() }}
-    <style type="text/css">
-        .important { color: #336699; }
+    <style>
+        #data {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+            border: 1px solid grey;
+            height: 50px;
+            width: 500px;
+            text-align: center;
+            margin-left: 34%;
+
+}
+
+#data td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#data tr:nth-child(even){background-color: #f2f2f2;}
+
+#data tr:hover {background-color: #ddd;}
+
+#data th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+}
     </style>
 {% endblock %}
 {% block content %}
@@ -20,9 +47,28 @@
 {% endwith %}
 <div style="text-align: center ; ">
     <h1>Calculation Result</h1><br>
-    <strong>Value 1: </strong> {{ value1 }} <br>
-    <strong>Value 2: </strong> {{ value2 }} <br>
-    <strong>Type of Operation: </strong> {{ operation }} <br>
-    <strong>Your Result: </strong> {{ result }}
+     <table id="data" >
+
+      <tr>
+        <th>Value 1</th>
+        <th>Value 2</th>
+        <th>Operation</th>
+        <th>Result</th>
+      </tr>
+
+
+{#      {% for user in users %}#}
+        <tr>
+          <td>{{ value1 }}</td>
+          <td>{{ value2 }}</td>
+          <td>{{ operation }}</td>
+          <td>{{ result }}</td>
+        </tr>
+
+
+{#      {% endfor %}#}
+
+  </table>
+
 </div>
 {% endblock %}

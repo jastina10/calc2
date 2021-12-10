@@ -11,3 +11,8 @@
 ![img.png](numeric.PNG)
 
 ![img.png](img.png)
+
+## Beautiful Table 
+
+![img.png](table.PNG)
+
